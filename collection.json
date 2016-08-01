@@ -1,0 +1,4163 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Planedia API",
+		"_postman_id": "4745c3d1-f9cd-d65a-7b6b-4f463d584468",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "000 Helpers",
+			"description": "",
+			"item": [
+				{
+					"name": "Who am I",
+					"request": {
+						"url": "{{url}}/v1/whoami",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1249,\n    \"type\":\"user\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"description": "",
+			"item": [
+				{
+					"name": "Get country details (by country_id)",
+					"request": {
+						"url": "{{url}}/v1/countries/2080969/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get country details  (by slug)",
+					"request": {
+						"url": "{{url}}/v1/countries/brazil/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get country cities",
+					"request": {
+						"url": "{{url}}/v1/countries/brazil/cities?limit=5&page=1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General",
+			"description": "",
+			"item": [
+				{
+					"name": "Get transport options",
+					"request": {
+						"url": "{{url}}/v1/directions/5079/5081",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get checklist items of planedia",
+					"request": {
+						"url": "{{url}}/v1/checklist-items",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_id\": 2\n}"
+						},
+						"description": "Get checklist items wich planedia is the owner. Results can be sorted by 'id' or 'item'."
+					},
+					"response": []
+				},
+				{
+					"name": "Get travel-styles",
+					"request": {
+						"url": "{{url}}/v1/travel-styles",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "mak_bill@hotmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get currencies",
+					"request": {
+						"url": "{{url}}/v1/currencies",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "mak_bill@hotmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get airlines",
+					"request": {
+						"url": "{{url}}/v1/airlines?q=air",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "mak_bill@hotmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"description": "",
+			"item": [
+				{
+					"name": "Get notifications",
+					"request": {
+						"url": "{{url}}/v1/notifications",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get notifications status",
+					"request": {
+						"url": "{{url}}/v1/notifications/status",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Flag notification as interacted",
+					"request": {
+						"url": "{{url}}/v1/notifications/119/interacted/",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Flag notification as listed",
+					"request": {
+						"url": "{{url}}/v1/notifications/87/listed",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete notifications",
+					"request": {
+						"url": "{{url}}/v1/notifications/77",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Points",
+			"description": "",
+			"item": [
+				{
+					"name": "Get points",
+					"request": {
+						"url": "{{url}}/v1/points/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get points categories",
+					"request": {
+						"url": "{{url}}/v1/points/categories/place",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get points of type place",
+					"request": {
+						"url": "{{url}}/v1/points/place?limit=4",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get points of type attraction",
+					"request": {
+						"url": "{{url}}/v1/points/poi?limit=8",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get points of type hotel",
+					"request": {
+						"url": "{{url}}/v1/points/hotel?limit=4&sort=-views-week",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marcsansms@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "Marcelo Santiago",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "file",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get point details",
+					"request": {
+						"url": "{{url}}/v1/points/5081",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get point nearby  points",
+					"request": {
+						"url": "{{url}}/v1/points/5081/nearby/poi?page=1&category=31",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get point images",
+					"request": {
+						"url": "{{url}}/v1/points/5091/images",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marcsansms@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "Marcelo Santiago",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "file",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get point text description",
+					"request": {
+						"url": "{{url}}/v1/points/5081/wikitravel/pt",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marcsansms@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "Marcelo Santiago",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "file",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get point checked in users",
+					"request": {
+						"url": "{{url}}/v1/points/5081/checkins",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marcsansms@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "Marcelo Santiago",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "file",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get countries",
+					"request": {
+						"url": "{{url}}/v1/points/countries/south-central-america",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user closest place",
+					"request": {
+						"url": "{{url}}/v1/points/closest/38.732673500000004/-9.142182499999999/hotel",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "3e2f168cb84f6b6cbb9fc73690f1f945",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get bounding box",
+					"request": {
+						"url": "{{url}}/v1/points/5081/bounding-box/place",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get nearby coordinate",
+					"request": {
+						"url": "{{url}}/v1/points/nearby-coordinate/hotel?leftSide=-9.1551853716&rightSide=-9.1297613829&topSide=38.7410163163&bottomSide=38.7082434&recomends=true&rooms=1&guests=2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"description": "",
+			"item": [
+				{
+					"name": "Get permissions",
+					"request": {
+						"url": "{{url}}/v1/roles/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "mak_bill@hotmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get roles",
+					"request": {
+						"url": "{{url}}/v1/roles/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "mak_bill@hotmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add roles",
+					"request": {
+						"url": "{{url}}/v1/roles/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Super Admin\",\n    \"role_permissions\" : [\n        64,\n        73\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Edit roles",
+					"request": {
+						"url": "{{url}}/v1/roles/13",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Super Admin\",\n    \"role_permissions\" : [\n        64,\n        73,\n        74\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Roles",
+					"request": {
+						"url": "{{url}}/v1/roles/13",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"description": "",
+			"item": [
+				{
+					"name": "Search",
+					"request": {
+						"url": "{{url}}/v1/search?q=bra&types[]=cities,&types[]=countries&types[]=attractions&types[]=hotels",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search ElasticSearch",
+					"request": {
+						"url": "{{esUrl}}/planedia/_msearch",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"hotels\"}\n{\"sort\":[{\"rating\":{\"order\":\"desc\"}},{\"_score\":{\"order\":\"desc\"}},{\"views_week\":{\"order\":\"desc\"}},{\"views_total\":{\"order\":\"desc\"}}], \"query\": {\"multi_match\": {\"query\": \"bra\", \"type\": \"phrase_prefix\", \"fields\": [ \"name\", \"alternate\", \"tags\" ]} } , \"size\": 4}\n{\"type\": \"cities\"}\n{\"sort\":[{\"rating\":{\"order\":\"desc\"}},{\"_score\":{\"order\":\"desc\"}},{\"views_week\":{\"order\":\"desc\"}},{\"views_total\":{\"order\":\"desc\"}}], \"query\": {\"multi_match\": {\"query\": \"bra\", \"type\": \"phrase_prefix\", \"fields\": [ \"name\", \"alternate\", \"tags\" ]} } , \"size\": 4}\n{\"type\": \"attractions\"}\n{\"sort\":[{\"rating\":{\"order\":\"desc\"}},{\"_score\":{\"order\":\"desc\"}},{\"views_week\":{\"order\":\"desc\"}},{\"views_total\":{\"order\":\"desc\"}}], \"query\": {\"multi_match\": {\"query\": \"bra\", \"type\": \"phrase_prefix\", \"fields\": [ \"name\", \"alternate\", \"tags\" ]} } , \"size\": 4}\n{\"type\": \"countries\"}\n{\"sort\":[{\"rating\":{\"order\":\"desc\"}},{\"_score\":{\"order\":\"desc\"}},{\"views_week\":{\"order\":\"desc\"}},{\"views_total\":{\"order\":\"desc\"}}], \"query\": {\"multi_match\": {\"query\": \"bra\", \"type\": \"phrase_prefix\", \"fields\": [ \"name\", \"alternate\", \"tags\" ]} } , \"size\": 4}\n{}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get notifications",
+					"request": {
+						"url": "{{url}}/v1/notifications/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trips",
+			"description": "",
+			"item": [
+				{
+					"name": "Get trips",
+					"request": {
+						"url": "{{url}}/v1/trips ",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Trip Brennand to Riomar Recife\",\n  \"date_start\": \"2016-06-20\",\n  \"date_end\": \"2016-06-23\",\n  \"items\":[\n      {\n        \"type\": \"place\",\n        \"reference_id\": 1685,\n        \"reference_table\": \"points\"\n      },\n      {\n        \"type\": \"place\",\n        \"reference_id\": 4849719,\n        \"reference_table\": \"points\"\n      }\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create trip",
+					"request": {
+						"url": "{{url}}/v1/trips ",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Lisbon to Nazaré\",\n  \"date_start\": \"2016-06-27\",\n  \"date_end\": \"2016-06-30\",\n  \"items\":[\n      {\n        \"type\": \"place\",\n        \"reference_id\": 67296,\n        \"reference_table\": \"points\"\n      },\n      {\n        \"type\": \"place\",\n        \"reference_id\": 67270,\n        \"reference_table\": \"points\"\n      }\n  ]\n}"
+						},
+						"description": "- 5081 - Rio de Janeiro\n- 5091 - Teresópolis\n- 67296 - Lisbon\n- 67268 - Óbidos\n- 67270 - Nazaré\n- 5076 - Madrid\n- 69702 - Seville\n- 141466 - Barcelona\n- 475002 - Valencia\n- 58981 - Tokyo\n- 13588 - Moscow\n- 142099 - Oslo\n- 192139 - San Francisco\n- 181120 - Chicago\n- 168729 - Orlando\n- 80745 - Amsterdam"
+					},
+					"response": []
+				},
+				{
+					"name": "Get trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change trip privacy",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/privacy",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"privacy\": \"public\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add day to trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/days",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2016-06-28\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Item to trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/items",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"Novo item\",\n  \"reference_id\": 67296,\n  \"reference_table\": \"points\",\n  \"start_at\": \"2016-06-23 08:00:00\",\n  \"duration\": 30,\n  \"privacy\": \"public\",\n  \"currency_id\": \"BRL\",\n  \"cost\": 14.04,\n  \"latitude\": \"-8.0542774200\",\n  \"longitude\": \"-34.8812561035\",\n  \"type\": \"place\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Move trip item",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/items/135/move",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\":[\n        133,\n        134,\n        135,\n        136,\n        137,\n        138,\n        140\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete trip item",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/items/148",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change trip item privacy",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/items/141/privacy",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"privacy\": \"public\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trips - Checklists",
+			"description": "",
+			"item": [
+				{
+					"name": "Get checklists",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Get all checklists of a trip. Results can optionally be sorted by title."
+					},
+					"response": []
+				},
+				{
+					"name": "Get checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Get a trip checklist."
+					},
+					"response": []
+				},
+				{
+					"name": "Create checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"My awesome checklist\",\n    \"items\": [1, 2]\n}"
+						},
+						"description": "Adds a new checklist to the trip."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Deletes a checklist of a trip. User must delete all checklist items before deleting the checklist."
+					},
+					"response": []
+				},
+				{
+					"name": "Get items of checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists/4/items",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Get all items belonging to a trip checklist."
+					},
+					"response": []
+				},
+				{
+					"name": "Add item to checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists/1/items",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_id\": 5\n}"
+						},
+						"description": "Adds a user or planedia checklist item to a checklist."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete item from checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists/25/items/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Deletes an item from the checklist. All answers to that item in the trip will be deleted too."
+					},
+					"response": []
+				},
+				{
+					"name": "Get answers of checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists/4/answers",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Get answers of a trip checklist. Results can be sorted by 'id', 'user_id' or 'item_id'"
+					},
+					"response": []
+				},
+				{
+					"name": "Answer to item on checklist",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/checklists/29/items/1/answer",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Changes user answer to a trip checklist item"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trips - Members",
+			"description": "",
+			"item": [
+				{
+					"name": "Get trip members",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1810,\n    \"type\":\"user\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add member (user) to trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1249,\n    \"type\":\"user\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add member (invite by email) to trip ",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"marcelo.santiago@youlinked.com\",\n    \"name\" : \"Marcelo Youlinked\",\n    \"type\":\"user\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add member (dependent) to trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"type\":\"dependent\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add member (group) to trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"type\":\"group\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete member from trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/7",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Accept invite user to trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/23/accept",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Refuse invite user to trip",
+					"request": {
+						"url": "{{url}}/v1/trips/{{tripId}}/members/123/refuse",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trips Statistics",
+			"description": "",
+			"item": [
+				{
+					"name": "Get trip statistics",
+					"request": {
+						"url": "{{url}}/v1/trips ",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Trip Brennand to Riomar Recife\",\n  \"date_start\": \"2016-06-20\",\n  \"date_end\": \"2016-06-23\",\n  \"items\":[\n      {\n        \"type\": \"place\",\n        \"reference_id\": 1685,\n        \"reference_table\": \"points\"\n      },\n      {\n        \"type\": \"place\",\n        \"reference_id\": 4849719,\n        \"reference_table\": \"points\"\n      }\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"url": "{{url}}/v1/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Leanderson Monteiro",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "email",
+									"value": "leanderson3@planedia.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "file",
+									"enabled": true
+								},
+								{
+									"key": "language",
+									"value": "pt",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "travelStyles",
+									"value": "1,2,3",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user details",
+					"request": {
+						"url": "{{url}}/v1/users/{{userId}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user wishlist items",
+					"request": {
+						"url": "{{url}}/v1/users/wishlists/?sort=-date",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user checkin items",
+					"request": {
+						"url": "{{url}}/v1/users/checkins?sort=date",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user travel-styles",
+					"request": {
+						"url": "{{url}}/v1/users/{{userId}}/travel-styles",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update user travel-styles",
+					"request": {
+						"url": "{{url}}/v1/users/travel-styles",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"user_travel_style\": [\n                1,\n  3,\n  5,\n  6,\n  8,\n  12,\n  13,\n  14,\n  15\n            ]\n        }\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add point to wishlist",
+					"request": {
+						"url": "{{url}}/v1/users/wishlists",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"point_id\": 5091\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete point from wishlist",
+					"request": {
+						"url": "{{url}}/v1/users/wishlists/5079",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add point to checkin",
+					"request": {
+						"url": "{{url}}/v1/users/checkins",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"point_id\": 5091\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Point from checkin",
+					"request": {
+						"url": "{{url}}/v1/checkins/{{userId}}/5079/check",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search  users",
+					"request": {
+						"url": "{{url}}/v1/users/search?limit=100&sort=name&q=Marcelo",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"url": "{{url}}/v1/users/reset-password",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{userEmail}}\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change user name",
+					"request": {
+						"url": "{{url}}/v1/users/change-name",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{userName}}\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change user password",
+					"request": {
+						"url": "{{url}}/v1/users/change-password",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"currentPassword\": \"123456\",\n    \"newPassword\": \"23552188\",\n    \"newPasswordConfirmation\": \"23552188\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change user language ",
+					"request": {
+						"url": "{{url}}/v1/users/change-language",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"language\": \"pt\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change user currency ",
+					"request": {
+						"url": "{{url}}/v1/users/change-currency",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"currency\": \"BRL\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change user email",
+					"request": {
+						"url": "{{url}}/v1/users/change-email",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{userEmail}}\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change user bio",
+					"request": {
+						"url": "{{url}}/v1/users/change-biography",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"biography\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum risus, egestas sed convallis vestibulum, vehicula vitae erat. Sed non elementum ex, a efficitur sem. Morbi vestibulum velit nec condimentum ultrices. Vestibulum fringilla tempor lorem, quis lacinia mauris tristique ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change user picture",
+					"request": {
+						"url": "{{url}}/v1/users/change-image",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user checklist items",
+					"request": {
+						"url": "{{url}}/v1/users/checklistitems",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add user checklist items ",
+					"request": {
+						"url": "{{url}}/v1/users/checklistitems",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Certidão de nascimento\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user checklist items",
+					"request": {
+						"url": "{{url}}/v1/users/checklistitems/7",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users - Checklists items",
+			"description": "",
+			"item": [
+				{
+					"name": "Get checklist items",
+					"request": {
+						"url": "{{url}}/v1/users/checklist-items",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_id\": 2\n}"
+						},
+						"description": "Get all checklist items of the current logged in user. Results can be sorted by title."
+					},
+					"response": []
+				},
+				{
+					"name": "Add checklist item",
+					"request": {
+						"url": "{{url}}/v1/users/checklist-items",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item\": \"Take skis to the mountain.\"\n}"
+						},
+						"description": "Adds a checklist item to the current logged in user."
+					},
+					"response": []
+				},
+				{
+					"name": "Edit checklist item",
+					"request": {
+						"url": "{{url}}/v1/users/checklist-items/1",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item\":\"Bring birth certificate\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete checklist item",
+					"request": {
+						"url": "{{url}}/v1/users/checklist-items/4",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Delete a checklist item of the current logged in user."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users - Dependents",
+			"description": "",
+			"item": [
+				{
+					"name": "Get dependents ",
+					"request": {
+						"url": "{{url}}/v1/users/dependents/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add dependents (without photo)",
+					"request": {
+						"url": "{{url}}/v1/users/dependents",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marcos Freitas\",\n    \"gender\": \"m\",\n    \"passaport\": \"FG060606\",\n    \"birthdate\": \"1980-06-21\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add dependents (with photo)",
+					"request": {
+						"url": "{{url}}/v1/users/dependents",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Marcos Freitas",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "gender",
+									"value": "m",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "passaport",
+									"value": "FG060606",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "birthdate",
+									"value": "1980-06-21",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "file",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search dependents ",
+					"request": {
+						"url": "{{url}}/v1/users/dependents/search/?q=marc",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete dependents ",
+					"request": {
+						"url": "{{url}}/v1/users/dependents/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Edit dependents ",
+					"request": {
+						"url": "{{url}}/v1/users/dependents/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marcos Paulo de Freitas\",\n    \"gender\": \"m\",\n    \"passaport\": \"FG060606\",\n    \"birthdate\": \"1980-06-21\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users - Groups",
+			"description": "",
+			"item": [
+				{
+					"name": "Get groups ",
+					"request": {
+						"url": "{{url}}/v1/users/groups",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add groups ",
+					"request": {
+						"url": "{{url}}/v1/users/groups",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Novo grupo 2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete groups ",
+					"request": {
+						"url": "{{url}}/v1/users/groups/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Edit groups ",
+					"request": {
+						"url": "{{url}}/v1/users/groups/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Novo grupo 1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get  group integrants",
+					"request": {
+						"url": "{{url}}/v1/users/groups/{{groupId}}/integrants",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search group integrants ",
+					"request": {
+						"url": "{{url}}/v1/users/groups/1/integrants/search/?q=Rute&type=dependents",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add integrant to  group",
+					"request": {
+						"url": "{{url}}/v1/users/groups/{{groupId}}/integrants",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 23,\n    \"type\": \"dependent\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete integrant  from group",
+					"request": {
+						"url": "{{url}}/v1/users/groups/{{groupId}}/integrants/3",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users - Login",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"url": "{{url}}/v1/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"username\": \"{{userEmail}}\",\n            \"password\": \"{{userPassword}}\"\n        }\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login Facebook",
+					"request": {
+						"url": "{{url}}/v1/login/facebook?token={{facebookToken}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZTimelines (Deprecated)",
+			"description": "",
+			"item": [
+				{
+					"name": "Create timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines ",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"place_start\": 5087,\n    \"place_end\": 5081,\n    \"userId\": 234,\n    \"passengerTypeId\": 2,\n    \"name\": \"Teste Lugar Leanderson\",\n    \"public\": \"y\",\n    \"dateStart\": \"2015-10-23\",\n    \"days\": [\n        {\n            \"places\": [\n                \"5087\",\n                \"5081\"\n            ]\n        }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add day in timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/day/2115/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"note\" : \"Testando com o note\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add place in timeline day",
+					"request": {
+						"url": "{{url}}/v1/timelines/day/5185/place",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pointId\": 5079,\n    \"note\": \"Uma observacao sobre a cidade\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add hotel to timeline place",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/5009/hotel",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pointId\": 364265\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add attraction to timeline place",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/5009/attraction",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pointId\": 2445\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user  timelines ",
+					"request": {
+						"url": "{{url}}/v1/timelines/user/234?sort=-id",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete attraction from timeline place",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/attraction/3354",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete hotel from timeline place",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/hotel/3357",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete place from timeline day",
+					"request": {
+						"url": "{{url}}/v1/timelines/day/place/5017",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete day from timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/day/5188/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2116",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sort timeline days",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/sort",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"days\" :[\n            5185,\n            5184\n        ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Start Day Trip Timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/1328/start-date",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dateStart\": \"2015-11-10\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add user to timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/user/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"type\":\"group\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/user/1/user",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add transport to city",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/5009/transport",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transportType\": \"flight\",\n    \"description\":\"description\",\n    \"name\":\"Fly\",\n    \"meta\": {\n            \"airline_id\":\"12\",\n            \"sequence\":\"1\",\n            \"flight_number\":\"123ff\",\n            \"flight\":\"12122\",\n            \"airport_from\":\"SSA\",\n            \"airport_to\":\"REC\",\n            \"flight_date\":\"2016-02-28\",\n            \"arrival_date\":\"2016-04-28\",\n            \"seat_number\":\"123\",\n            \"confirm_number\":\"1231\"\n        }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update transport to city",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/transport/516",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transportType\": \"flight\",\n    \"description\":\"description\",\n    \"meta\": {\n            \"airline_id\":\"12\",\n            \"sequence\":\"1\",\n            \"flight_number\":\"BBBB\",\n            \"flight\":\"12122\",\n            \"airport_from\":\"SSA\",\n            \"airport_to\":\"REC\",\n            \"flight_date\":\"2016-02-28\",\n            \"arrival_date\":\"2016-04-28\",\n            \"seat_number\":\"123\",\n            \"confirm_number\":\"1231\"\n        }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete transport to city",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/transport/515",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change title timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/name/",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Teste de nome api\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change date start timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/start-date",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateStart\" : \"2016-06-10\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change note day in timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/day/5185/note",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"note\": \"Uma observacao sobre este dia\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change note place in day timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/place/5017/note",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"note\": \"Uma observação sobre esta cidade\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sort timeline places in day",
+					"request": {
+						"url": "{{url}}/v1/timelines/day/5184/sort",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"places\" :[\n            5010,\n            5009\n        ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sort timeline points in place for day",
+					"request": {
+						"url": "{{url}}/v1/timelines/day/5184/sort/5009",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"points\" :[\n            3347,\n            3346,\n            3345\n        ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change image Timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/change-image",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change visibility timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/update-trip-visibility/2115",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"points\" :[\n            3347,\n            3346,\n            3345\n        ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Directions",
+					"request": {
+						"url": "{{url}}/v1/directions/5076/5072",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search members",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/search-users-to-invite?q=rute",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get checklists timeline",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/checklistitems/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add checklistitems for trip",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/checklistitems/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"checklist_id\": 6\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete checklists for trip",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/checklistitems/6",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Answer checklist trip",
+					"request": {
+						"url": "{{url}}/v1/timelines/2115/checklistitems/2/answer",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
