@@ -2743,36 +2743,6 @@
 					"response": []
 				},
 				{
-					"name": "Add dependents (without photo)",
-					"request": {
-						"url": "{{url}}/v1/users/dependents",
-						"method": "POST",
-						"header": [
-							{
-								"key": "api-key",
-								"value": "{{apiKey}}",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{authorizationToken}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Marcos Freitas\",\n    \"gender\": \"m\",\n    \"passaport\": \"FG060606\",\n    \"birthdate\": \"1980-06-21\"\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
 					"name": "Add dependents (with photo)",
 					"request": {
 						"url": "{{url}}/v1/users/dependents",
@@ -2829,6 +2799,38 @@
 					"response": []
 				},
 				{
+					"name": "Change dependent image",
+					"request": {
+						"url": "{{url}}/v1/users/dependents/59/images",
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"value": "dependent_new_photo.jpg",
+									"type": "file",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "Search dependents ",
 					"request": {
 						"url": "{{url}}/v1/users/dependents/search/?q=marc",
@@ -2854,32 +2856,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete dependents ",
-					"request": {
-						"url": "{{url}}/v1/users/dependents/2",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "api-key",
-								"value": "{{apiKey}}",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{authorizationToken}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Edit dependents ",
+					"name": "Edit dependent (resets image)",
 					"request": {
 						"url": "{{url}}/v1/users/dependents/3",
 						"method": "PUT",
@@ -2903,6 +2880,31 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"name\": \"Marcos Paulo de Freitas\",\n    \"gender\": \"m\",\n    \"passaport\": \"FG060606\",\n    \"birthdate\": \"1980-06-21\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete dependents ",
+					"request": {
+						"url": "{{url}}/v1/users/dependents/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{apiKey}}",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authorizationToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
 						},
 						"description": ""
 					},
